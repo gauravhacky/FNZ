@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST'){
 }
 
 $json = isJson($phpInput);
-if($json !=1){
+if($json !=1){ 
   http_response_code(405);
   $aData = array('msisdn' =>$getData['msisdn'],'result' => array('status' => 'failure', 'code' => 'C405', 'message' => 'Method not supported'), 'operator' => array('name' => 'fnz_indo'));
 }
@@ -73,3 +73,4 @@ function isJson($string) {
 
 
 ?>
+Test
